@@ -28,10 +28,20 @@ public class UserControllerRest {
 	public ResponseEntity<UserDTO> getUserById(@PathVariable Integer id) {
 
 		UserDTO userDTO = new UserDTO(1, "Rafael");
-		userDTO.setLastName("Benedetelli");
-		userDTO.setEdad(38);
+		//userDTO.setLastName("Benedetelli");
+		//userDTO.setEdad(38);
+
+		/*if(userDTO == null) {
+	
+			return ResponseEntity.notFound().build();
+		}
+		else {
+			return ResponseEntity.ok(userDTO);	
+		}*/	
+		
 
 		return ResponseEntity.ok(userDTO);
+		
 	}
 
 	@GetMapping
@@ -66,10 +76,11 @@ public class UserControllerRest {
 
 	@PostMapping
 	public ResponseEntity<String> createUser(@RequestBody UserDTO userDTO) {
-        
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(userDTO.getId()).toUri();
-				
-		return ResponseEntity.ok(location + userDTO.getId().toString());		
+
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(userDTO.getId())
+				.toUri();
+
+		return ResponseEntity.created(location).build();
 	}
 
 	@PutMapping
