@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "44275ce2-ef4a-4a1e-bbfb-6914959805ff",
+		"name": "Escuela IT DEV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "USERS",
+			"item": [
+				{
+					"name": "Get User By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/users/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/users/?name=Wilson",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"users",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Wilson"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Rafael\",\r\n    \"lastName\": \"Benedetelli\",\r\n    \"edad\": 38\r\n}"
+						},
+						"url": {
+							"raw": "{{api}}/users",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Users",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Rafael\",\r\n    \"lastName\": \"Benedetelli\",\r\n    \"edad\": 38\r\n}"
+						},
+						"url": {
+							"raw": "{{api}}/users",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch Users",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"edad\": 25\r\n}"
+						},
+						"url": {
+							"raw": "{{api}}/users/1",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
