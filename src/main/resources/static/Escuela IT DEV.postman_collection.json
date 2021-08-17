@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "44275ce2-ef4a-4a1e-bbfb-6914959805ff",
+		"_postman_id": "b110739e-8ee7-4421-93e0-884f1941b717",
 		"name": "Escuela IT DEV",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -21,6 +21,25 @@
 							"path": [
 								"users",
 								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Accounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api}}/users/1/accounts",
+							"host": [
+								"{{api}}"
+							],
+							"path": [
+								"users",
+								"1",
+								"accounts"
 							]
 						}
 					},
