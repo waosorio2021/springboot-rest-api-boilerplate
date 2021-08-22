@@ -1,4 +1,4 @@
-package co.edu.escuela_it.microservicio.controller;
+package org.boilerplate.microservice.controller;
 
 import java.net.URI;
 import java.util.ArrayList;
@@ -6,7 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import co.edu.escuela_it.microservicio.dto.AccountDTO;
+import org.boilerplate.microservice.dto.AccountDTO;
+import org.boilerplate.microservice.dto.UserDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -18,8 +19,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
-import co.edu.escuela_it.microservicio.dto.UserDTO;
 
 @RestController
 @RequestMapping("/users")

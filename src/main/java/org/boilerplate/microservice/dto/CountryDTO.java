@@ -1,4 +1,4 @@
-package co.edu.escuela_it.microservicio.dto;
+package org.boilerplate.microservice.dto;
 
 import lombok.Data;
 

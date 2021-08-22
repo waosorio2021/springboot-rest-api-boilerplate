@@ -1,4 +1,4 @@
-package co.edu.escuela_it.microservicio;
+package org.boilerplate.microservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

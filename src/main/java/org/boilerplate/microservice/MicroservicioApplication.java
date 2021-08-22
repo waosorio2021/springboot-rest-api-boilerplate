@@ -1,4 +1,4 @@
-package co.edu.escuela_it.microservicio;
+package org.boilerplate.microservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
